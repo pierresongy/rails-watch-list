@@ -1,0 +1,45 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Colonnes adaptatives */
+  grid-gap: 16px; /* Espacement entre les cartes */
+  padding: 16px; /* Marge intérieure autour des cartes */
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 250px; /* Fixe la hauteur pour des cartes uniformes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 8px; /* Coins arrondis pour un meilleur rendu */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un style moderne */
+}
+
+.link-card {
+  text-decoration: none;
+  color: inherit;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
